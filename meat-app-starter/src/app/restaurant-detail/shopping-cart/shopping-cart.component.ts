@@ -5,6 +5,7 @@ import { ShoppingCartService } from './shopping-cart.service'
 @Component({
   selector: 'mt-shopping-cart',
   templateUrl: './shopping-cart.component.html',
+  preserveWhitespaces: true,
   // ANIMAÇÕES COM KEYFRAMES
   animations: [
     trigger('row', [
