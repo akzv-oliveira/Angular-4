@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/operator/map'
 
@@ -13,7 +13,10 @@ import { MEAT_API } from '../app.api'
 @Injectable()
 export class OrderService {
 
-    constructor(private cartService: ShoppingCartService, private http: HttpClient) { }
+    constructor(
+        private cartService: ShoppingCartService,
+        private http: HttpClient,
+    ) { }
 
     itemsValue(): number {
         return this.cartService.total()
